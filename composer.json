@@ -12,7 +12,8 @@
     "require": {
         "composer/installers": "^1.0",
         "wp-cli/wp-cli": "^0.23.1",
-        "vlucas/phpdotenv": "^2.2"
+        "vlucas/phpdotenv": "^2.2",
+        "wpackagist-plugin/akismet": "^3.1"
     },
     "repositories":[
         {"type":"composer", "url":"https://wpackagist.org"}
