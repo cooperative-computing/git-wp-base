@@ -2,11 +2,13 @@
     "name": "cooperative-computing/git-wp-base",
     "description": "This project will create a WordPress base installation using wp-cli/wp-cli package and using vlucas/phpdotenv package to expose configuration values in PHP $_ENV super global.",
     "type": "project",
+    "keywords": ["wordpress", "composer", "git"],
     "license": "MIT",
     "authors": [
         {
             "name": "Waqas Ashraf",
-            "email": "waqas@cooperativecomputing.com"
+            "email": "waqas@cooperativecomputing.com",
+            "homepage": "http://www.cooperativecomputing.com"
         }
     ],
     "require": {
@@ -29,7 +31,8 @@
             "php -r \"copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "vendor/bin/wp core download --path=public"
+            "vendor/bin/wp core download --path=public",
+            "rm -f public/wp-content/plugins/hello.php"
         ]
     }
 }
