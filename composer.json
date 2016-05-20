@@ -13,5 +13,14 @@
         "composer/installers": "^1.0",
         "wp-cli/wp-cli": "^0.23.1",
         "vlucas/phpdotenv": "^2.2"
+    },
+    "repositories":[
+        {"type":"composer", "url":"https://wpackagist.org"}
+    ],
+    "extra": {
+        "installer-paths": {
+            "public/wp-content/themes/{$name}/": ["vendor:wpackagist-theme"],
+            "public/wp-content/plugins/{$name}/": ["vendor:wpackagist-plugin"]
+        }
     }
 }
