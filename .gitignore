@@ -8,7 +8,13 @@ public/.htaccess
 public/sitemap.xml
 public/sitemap.xml.gz
 public/wp-admin/
-public/wp-content/
+public/wp-content/debug.log
+public/wp-content/index.php
+public/wp-content/themes/index.php
+public/wp-content/themes/twentyfifteen/
+public/wp-content/themes/twentyfourteen/
+public/wp-content/themes/twentysixteen/
+public/wp-content/plugins/
 public/wp-includes/
 public/index.php
 public/license.txt
