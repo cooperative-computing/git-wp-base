@@ -16,7 +16,7 @@ if (!file_exists($current_path . '.env')) {
  * Load Environment Settings from .env file into $_ENV superglobal
  */
 require_once $current_path . 'vendor/autoload.php';
-$dotenv = new Dotenv\Dotenv($current_path);
+$dotenv = Dotenv\Dotenv::create($current_path);
 $dotenv->load();
 unset($dotenv);
 
