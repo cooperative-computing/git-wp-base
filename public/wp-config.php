@@ -20,6 +20,11 @@ $dotenv = Dotenv\Dotenv::create($current_path);
 $dotenv->load();
 unset($dotenv);
 
+// Check if HTTPS is coming from a Reverse Proxy
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+}
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', getenv('DB_NAME'));
