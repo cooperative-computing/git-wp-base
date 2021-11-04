@@ -12,9 +12,9 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.6",
-        "wp-cli/wp-cli-bundle": "^2.1",
-        "vlucas/phpdotenv": "^3.3"
+        "composer/installers": "^2.0",
+        "wp-cli/wp-cli-bundle": "^2.5",
+        "vlucas/phpdotenv": "^5.3"
     },
     "repositories":[
         {"type":"composer", "url":"https://wpackagist.org"}
