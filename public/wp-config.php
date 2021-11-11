@@ -16,7 +16,7 @@ if (!file_exists($current_path . '.env')) {
  * Load Environment Settings from .env file into $_ENV superglobal
  */
 require_once $current_path . 'vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::create($current_path);
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable($current_path);
 $dotenv->load();
 unset($dotenv);
 
@@ -53,14 +53,7 @@ define('DB_COLLATE', getenv('DB_COLLATE'));
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'J9TRN]e{lP<?>E7T_7g![ox`L+Hxd,:]YIfu.d=ZJxF4g~3sy;VsDYQ+!E7D$[RU');
-define('SECURE_AUTH_KEY',  'E]X?hu<Oy|8_LuS|6v)- &#AP+TCv<o,Ej=zW{b$V^&;N>,(RJ+V<Lr|UK-H@1+%');
-define('LOGGED_IN_KEY',    'W1KM=ANh1cxr}9b|@nXh,sA>du/b;t_IwJHXnm2gTbT*d*ha#Ba1:;&..H9?lU>L');
-define('NONCE_KEY',        '{:8;#M:1QPm6N-@=Izc&LYO Q@#qEVbPyKfKPB7XBo_g/2vPRO?8%E<Dy6/>G&9l');
-define('AUTH_SALT',        'L{cO&bIq;|&@`g*Cn-uB^L}WX:IKR%yn^#<|ja87|}SQ@rvI5]JuSZgMe*;>zy)u');
-define('SECURE_AUTH_SALT', 'Riy?}K`@3nF2q]V!WXfTStoI0*dyqA`>hDyH> ]ZeLHRrA,LxYT(jQE@.9t7H1P*');
-define('LOGGED_IN_SALT',   '#58j-=06.-^,d5iL%(GPk/!b$e#cQl[>#6HQx%lrgeM:YU7]f/rhwIf+RtMc=W*+');
-define('NONCE_SALT',       '`XRdQjZ_}tf+3KDqRWeaVS5]^ZT}T_ii0u@u<yKEi#aG4nY*YYg4Ep*}RKjJW,|L');
+# INSERT WP SALT HERE
 
 /**#@-*/
 
