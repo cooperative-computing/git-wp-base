@@ -34,5 +34,10 @@
             "vendor/bin/wp core download --path=public",
             "rm -f public/wp-content/plugins/hello.php"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
     }
 }
